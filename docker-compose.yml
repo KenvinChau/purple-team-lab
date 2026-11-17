@@ -15,6 +15,19 @@ services:
       - dvwa
     profiles: ["attack"]   # only starts when you ask for it
 
+  capture:
+    build: ./capture
+    network_mode: "service:dvwa"
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    volumes:
+      - ./captures:/captures
+    command: ["tcpdump", "-i", "eth0", "-nn", "-U", "-w", "/captures/nmap-scan.pcap"]
+    depends_on:
+      - dvwa
+    profiles: ["capture"]
+
   db:
     image: mariadb:10
     environment:
