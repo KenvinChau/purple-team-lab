@@ -9,6 +9,12 @@ services:
       - "127.0.0.1:4280:80"   # localhost only, never expose DVWA
     restart: unless-stopped
 
+  attacker:
+    build: ./attacker
+    depends_on:
+      - dvwa
+    profiles: ["attack"]   # only starts when you ask for it
+
   db:
     image: mariadb:10
     environment:
