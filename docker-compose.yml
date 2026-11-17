@@ -1,0 +1,24 @@
+services:
+  dvwa:
+    image: ghcr.io/digininja/dvwa:latest
+    environment:
+      - DB_SERVER=db
+    depends_on:
+      - db
+    ports:
+      - "127.0.0.1:4280:80"   # localhost only, never expose DVWA
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=dvwa
+      - MYSQL_DATABASE=dvwa
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=p@ssw0rd
+    volumes:
+      - dvwa-db:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  dvwa-db:
