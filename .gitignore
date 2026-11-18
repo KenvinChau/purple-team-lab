@@ -6,3 +6,4 @@ captures/tmp/
 captures/*.pcap
 output/suricata/*
 attacks/sqlmap-sqli.pcap
+attacks/benign-browsing.pcap
