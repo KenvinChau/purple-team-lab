@@ -5,3 +5,4 @@ __pycache__/
 captures/tmp/
 captures/*.pcap
 output/suricata/*
+attacks/sqlmap-sqli.pcap

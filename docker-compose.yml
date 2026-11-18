@@ -23,7 +23,7 @@ services:
       - NET_ADMIN
     volumes:
       - ./captures:/captures
-    command: ["tcpdump", "-i", "eth0", "-nn", "-U", "-w", "/captures/nmap-scan.pcap"]
+    command: ["tcpdump", "-i", "eth0", "-nn", "-U", "-w", "/captures/${CAPTURE_NAME:-capture}.pcap"]
     depends_on:
       - dvwa
     profiles: ["capture"]
@@ -45,7 +45,7 @@ services:
       - ./attacks:/pcaps:ro
       - ./rules/suricata:/rules:ro
       - ./output/suricata:/var/log/suricata
-    command: ["-v", "-l", "/var/log/suricata", "--runmode", "single", "-r", "/pcaps/nmap-connect-scan.pcap", "-S", "/rules/local.rules", "-k", "none"]
+    command: ["-v", "-l", "/var/log/suricata", "--runmode", "single", "-r", "/pcaps/${PCAP:-nmap-connect-scan.pcap}", "-S", "/rules/local.rules", "-k", "none"]
     profiles: ["detect"]
 
 volumes:
