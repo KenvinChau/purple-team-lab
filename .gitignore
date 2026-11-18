@@ -7,3 +7,5 @@ captures/*.pcap
 output/suricata/*
 attacks/sqlmap-sqli.pcap
 attacks/benign-browsing.pcap
+attacks/manual-sqli.pcap
+attacks/manual-sqli-2.pcap
