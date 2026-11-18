@@ -45,7 +45,7 @@ services:
       - ./attacks:/pcaps:ro
       - ./rules/suricata:/rules:ro
       - ./output/suricata:/var/log/suricata
-    command: ["-v", "-l", "/var/log/suricata", "-r", "/pcaps/nmap-connect-scan.pcap", "-S", "/rules/local.rules", "-k", "none"]
+    command: ["-v", "-l", "/var/log/suricata", "--runmode", "single", "-r", "/pcaps/nmap-connect-scan.pcap", "-S", "/rules/local.rules", "-k", "none"]
     profiles: ["detect"]
 
 volumes:
