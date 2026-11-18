@@ -4,6 +4,8 @@ for %%P in (nmap-connect-scan.pcap sqlmap-sqli.pcap benign-browsing.pcap) do (
   set "PCAP=%%P"
   docker compose --profile detect run --rm suricata >nul 2>&1
   echo === %%P ===
-  find /c "1000001" output\suricata\fast.log
-  find /c "1000002" output\suricata\fast.log
+  for %%S in (1000001 1000002 1000003) do (
+    <nul set /p "=%%S: "
+    find /c "%%S" output\suricata\fast.log
+  )
 )
