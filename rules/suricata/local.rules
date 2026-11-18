@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"LAB Possible TCP port scan (many SYNs from one source)"; flags:S,12; threshold:type both, track by_src, count 15, seconds 2; classtype:attempted-recon; sid:1000001; rev:1; metadata:mitre_tactic_id TA0007, mitre_technique_id T1046;)
