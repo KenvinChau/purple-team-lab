@@ -1,5 +1,5 @@
 @echo off
-for %%P in (nmap-connect-scan.pcap sqlmap-sqli.pcap benign-browsing.pcap manual-sqli.pcap manual-sqli-2.pcap) do (
+for %%P in (nmap-connect-scan.pcap sqlmap-sqli.pcap benign-browsing.pcap manual-sqli.pcap manual-sqli-2.pcap hard-negatives.pcap f5-burst.pcap) do (
   del /q output\suricata\* >nul 2>&1
   set "PCAP=%%P"
   docker compose --profile detect run --rm suricata >nul 2>&1
