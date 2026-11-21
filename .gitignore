@@ -5,3 +5,13 @@ __pycache__/
 captures/tmp/
 captures/*.pcap
 output/suricata/*
+.pytest_cache/
+attacks/*.pcap
+!attacks/nmap-connect-scan.pcap
+!attacks/sqlmap-sqli.pcap
+!attacks/benign-browsing.pcap
+!attacks/manual-sqli.pcap
+!attacks/manual-sqli-2.pcap
+!attacks/hard-negatives.pcap
+.pytest_cache/
+*.pcap binary
