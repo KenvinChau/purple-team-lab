@@ -1,6 +1,8 @@
 # Purple Team Lab
 ![tests](https://github.com/KenvinChau/purple-team-lab/actions/workflows/detection-tests.yml/badge.svg)
 
+Write-up: [what testing my own rules found](docs/WRITEUP.md)
+
 A free, reproducible lab where I attack a deliberately vulnerable web app
 (DVWA) with standard tools (nmap, sqlmap), write Suricata detection rules,
 and test them against recorded traffic, including harmless traffic that
