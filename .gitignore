@@ -5,9 +5,3 @@ __pycache__/
 captures/tmp/
 captures/*.pcap
 output/suricata/*
-attacks/sqlmap-sqli.pcap
-attacks/benign-browsing.pcap
-attacks/manual-sqli.pcap
-attacks/manual-sqli-2.pcap
-attacks/hard-negatives.pcap
-attacks/f5-burst.pcap
