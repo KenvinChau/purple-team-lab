@@ -14,4 +14,4 @@ attacks/*.pcap
 !attacks/manual-sqli-2.pcap
 !attacks/hard-negatives.pcap
 .pytest_cache/
-*.pcap binary
+
