@@ -59,6 +59,22 @@ Rules map to MITRE ATT&CK T1046 (network service discovery) and T1190
 - [ ] Sigma rules
 - [ ] Write-up
 
+## Run the tests
+
+Requires Docker and Python 3.
+
+    pip install pytest
+    python -m pytest -v
+
+Each test replays one recording from `attacks/` through Suricata and compares
+the alert counts per rule with the table in `docs/WRITEUP.md`.
+
+## More
+
+- Write-up of findings and limitations: `docs/WRITEUP.md`
+- Rules: `rules/suricata/local.rules`
+- Sanitizing recordings before committing them: `scripts/sanitize_pcap.py`
+
 ## Quick start
 
     docker compose up -d
