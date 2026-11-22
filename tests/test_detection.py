@@ -14,13 +14,13 @@ IMAGE = "jasonish/suricata:8.0.8"  # pinned: the version these counts came from
 # Expected alerts per rule id. A rule that is absent must stay silent.
 EXPECTED = {
     "nmap-connect-scan.pcap": {1000001: 1},
-    "sqlmap-sqli.pcap": {1000002: 8, 1000003: 7, 1000004: 57, 1000005: 15},
+    "sqlmap-sqli.pcap": {1000002: 8, 1000003: 7, 1000004: 57, 1000005: 15, 1000006: 5},
     "benign-browsing.pcap": {},
     "manual-sqli.pcap": {1000002: 1, 1000005: 1},
     "manual-sqli-2.pcap": {1000004: 1},
     "hard-negatives.pcap": {},
-    "tamper-space2comment.pcap": {1000002: 10, 1000003: 11, 1000004: 57, 1000005: 15},
-    "manual-error.pcap": {},
+    "tamper-space2comment.pcap": {1000002: 10, 1000003: 11, 1000004: 57, 1000005: 15, 1000006: 13},
+    "manual-error.pcap": {1000006: 2},
 }
 
 
