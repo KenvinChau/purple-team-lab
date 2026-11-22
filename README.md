@@ -25,6 +25,7 @@ Alerts per recording (`scripts/matrix.cmd`, Suricata run offline on pcaps).
 | hand-written SQLi | 0 | 1 | 0 | 0 | 1 |
 | hand-written `1 OR 1=1` | 0 | 0 | 0 | 1 | 0 |
 | harmless look-alikes | 0 | 0 | 0 | 0 | 0 |
+| sqlmap with `space2comment` | 0 | 10 | 11 | 57 | 15 |
 
 Rules map to MITRE ATT&CK T1046 (network service discovery) and T1190
 (exploit public-facing application).
