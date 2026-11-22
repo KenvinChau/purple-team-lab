@@ -19,6 +19,7 @@ EXPECTED = {
     "manual-sqli.pcap": {1000002: 1, 1000005: 1},
     "manual-sqli-2.pcap": {1000004: 1},
     "hard-negatives.pcap": {},
+    "tamper-space2comment.pcap": {1000002: 1, 1000003: 11, 1000004: 1},
 }
 
 

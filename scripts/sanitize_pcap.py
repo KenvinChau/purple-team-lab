@@ -11,6 +11,7 @@ from pathlib import Path
 SRC = Path("captures")
 DST = Path("attacks")
 FILES = [
+    "tamper-space2comment.pcap",
     "sqlmap-sqli.pcap",
     "benign-browsing.pcap",
     "manual-sqli.pcap",
