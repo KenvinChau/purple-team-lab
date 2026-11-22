@@ -17,6 +17,7 @@ FILES = [
     "manual-sqli.pcap",
     "manual-sqli-2.pcap",
     "hard-negatives.pcap",
+    "manual-error.pcap",
 ]
 
 # Group 1 stays, group 2 is replaced with the same number of 'x'.

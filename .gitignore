@@ -14,5 +14,6 @@ attacks/*.pcap
 !attacks/manual-sqli-2.pcap
 !attacks/hard-negatives.pcap
 !attacks/tamper-space2comment.pcap
+!attacks/manual-error.pcap
 .pytest_cache/
 
